@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "JetBrains Mono", "Fira Code", Menlo, Consolas, monospace;
+
+  --color-brand-50: oklch(0.97 0.02 320);
+  --color-brand-100: oklch(0.93 0.05 320);
+  --color-brand-200: oklch(0.86 0.12 320);
+  --color-brand-300: oklch(0.77 0.19 320);
+  --color-brand-400: oklch(0.68 0.24 320);
+  --color-brand-500: oklch(0.6 0.27 320);
+  --color-brand-600: oklch(0.52 0.27 320);
+  --color-brand-700: oklch(0.44 0.23 320);
+  --color-brand-800: oklch(0.36 0.18 320);
+  --color-brand-900: oklch(0.28 0.13 320);
+
+  --color-flame-400: oklch(0.78 0.18 50);
+  --color-flame-500: oklch(0.7 0.21 45);
+  --color-flame-600: oklch(0.62 0.22 40);
+
+  --color-acid-400: oklch(0.88 0.21 130);
+  --color-acid-500: oklch(0.82 0.23 130);
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-white text-zinc-900 font-sans antialiased;
+    @apply dark:bg-zinc-950 dark:text-zinc-100;
+    background-image:
+      radial-gradient(60rem 40rem at 110% -10%, color-mix(in oklch, var(--color-brand-400) 22%, transparent), transparent 70%),
+      radial-gradient(50rem 35rem at -10% 110%, color-mix(in oklch, var(--color-flame-500) 18%, transparent), transparent 70%);
+    background-attachment: fixed;
+  }
+  html.dark body {
+    background-image:
+      radial-gradient(60rem 40rem at 110% -10%, color-mix(in oklch, var(--color-brand-500) 28%, transparent), transparent 70%),
+      radial-gradient(50rem 35rem at -10% 110%, color-mix(in oklch, var(--color-flame-600) 25%, transparent), transparent 70%);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-4 font-display font-bold uppercase tracking-wider text-white;
+    @apply bg-gradient-to-r from-brand-500 via-brand-600 to-flame-500;
+    @apply shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40;
+    @apply transition-all duration-200 ease-out;
+    @apply hover:-translate-y-0.5 active:translate-y-0;
+    @apply disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:shadow-none;
+  }
+
+  .card {
+    @apply rounded-3xl border border-zinc-200 bg-white/80 backdrop-blur-xl;
+    @apply dark:border-zinc-800 dark:bg-zinc-900/70;
+    @apply shadow-xl shadow-zinc-900/5 dark:shadow-black/40;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider;
+  }
+}
+
+.eazip-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.eazip-wordmark .ea { color: #0e0e12; }
+.eazip-wordmark .zip {
+  background: linear-gradient(90deg, #d946ef, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+html.dark .eazip-wordmark .ea { color: #f2f1ed; }

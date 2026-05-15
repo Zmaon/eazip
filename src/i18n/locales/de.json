@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "eazip.ch — Packen. Schützen. Senden.",
+    "description": "Erstellen Sie eine passwortgeschützte ZIP-Datei direkt im Browser. Ihre Dateien verlassen Ihr Gerät nie."
+  },
+  "header": {
+    "themeToLight": "Zum hellen Modus wechseln",
+    "themeToDark": "Zum dunklen Modus wechseln",
+    "language": "Sprache"
+  },
+  "hero": {
+    "kicker": "Aus der Schweiz · Läuft in Ihrem Browser",
+    "title1": "Packen.",
+    "title2": "Schützen.",
+    "title3": "Senden.",
+    "subtitle": "Der einfachste Weg, eine passwortgeschützte ZIP-Datei zu erstellen. Dateien ablegen, Sicherheitsstufe wählen und das Archiv herunterladen — ohne irgendetwas an irgendjemanden zu senden."
+  },
+  "form": {
+    "unsupportedTitle": "Ihr Browser ist zu alt.",
+    "unsupportedBody": "Bitte öffnen Sie eazip.ch in einer aktuellen Version von Chrome, Edge, Firefox oder Safari, um ZIPs beliebiger Grösse zu erstellen.",
+    "stepFiles": "{n} · Dateien hinzufügen",
+    "stepMode": "{n} · Sicherheitsstufe wählen",
+    "stepPassword": "{n} · Passwort festlegen",
+    "stepName": "{n} · Archiv benennen",
+    "archivePlaceholder": "eazip",
+    "statusAddFile": "Fügen Sie mindestens eine Datei hinzu, um zu starten.",
+    "statusPickPassword": "Wählen Sie ein Passwort, um fortzufahren.",
+    "statusReady": "Bereit, wenn Sie es sind.",
+    "statusProgress": "Komprimiere {entry} — {percent}% ({index}/{count})",
+    "statusSavedFs": "„{filename}\" wurde am gewählten Ort gespeichert.",
+    "statusDownloading": "„{filename}\" wird heruntergeladen.",
+    "errorOpen": "Zielort konnte nicht geöffnet werden.",
+    "errorGeneric": "Beim Erstellen der ZIP-Datei ist etwas schiefgelaufen.",
+    "errorUnsupported": "Ihr Browser ist zu alt, um grosse ZIPs auf die Festplatte zu streamen. Bitte verwenden Sie eine aktuelle Version von Chrome, Edge, Firefox oder Safari.",
+    "submitIdle": "ZIP erstellen",
+    "submitBusy": "Bitte warten…"
+  },
+  "dropzone": {
+    "drop": "Dateien hier ablegen",
+    "browsePrefix": "oder",
+    "browseLink": "zum Durchsuchen klicken",
+    "subnote": "Mehrere Dateien sind willkommen. Nichts verlässt Ihr Gerät.",
+    "summary": "{count} Datei · insgesamt {size} | {count} Dateien · insgesamt {size}",
+    "clear": "Alle entfernen",
+    "removeLabel": "Datei entfernen"
+  },
+  "modes": {
+    "none": {
+      "title": "Ohne Passwort",
+      "blurb": "Ein normales ZIP. Jeder mit der Datei kann es öffnen.",
+      "tag": "Am einfachsten"
+    },
+    "legacy": {
+      "title": "Klassisches Passwort",
+      "blurb": "Öffnet überall (macOS, Windows). Schwach — geeignet für beiläufige Privatsphäre, nicht für Geheimnisse.",
+      "tag": "Maximal kompatibel"
+    },
+    "modern": {
+      "title": "Modernes Passwort",
+      "blurb": "AES-256-Verschlüsselung. Echte Sicherheit. Aktuelle macOS-Versionen öffnen es nativ; Empfänger unter Windows benötigen 7-Zip oder ein ähnliches Tool.",
+      "tag": "Wirklich sicher"
+    }
+  },
+  "password": {
+    "label": "Passwort",
+    "placeholder": "Wählen Sie etwas Starkes",
+    "generate": "Generieren",
+    "generateTitle": "Eine merkbare Passphrase generieren",
+    "generateHint": "Generieren erzeugt eine Passphrase aus 5 Wörtern — leichter zu merken als zufällige Zeichen und trotzdem sehr stark.",
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "show": "Passwort anzeigen",
+    "hide": "Passwort verbergen",
+    "strength0": "Sehr schwach",
+    "strength1": "Schwach",
+    "strength2": "Mittel",
+    "strength3": "Gut",
+    "strength4": "Stark",
+    "strength5": "Sehr stark",
+    "strengthEmpty": "Leer",
+    "warnLegacy": "Das klassische ZipCrypto ist schwach. Nur für beiläufige Privatsphäre verwenden — nicht für vertrauliche Daten.",
+    "warnModern": "AES-256. Aktuelle macOS-Versionen öffnen dies direkt im Finder. Unter Windows benötigt der Empfänger 7-Zip, WinRAR oder einen anderen modernen Archivierer — das eingebaute ZIP-Tool reicht nicht."
+  },
+  "info": {
+    "kicker": "So funktioniert es",
+    "title": "Alles passiert in Ihrem Browser.",
+    "intro": "eazip.ch lädt Ihre Dateien nie auf einen Server hoch. Ihr Computer komprimiert und verschlüsselt sie lokal, und das Einzige, was die Seite verlässt, ist das fertige ZIP — direkt in Ihren Download-Ordner.",
+    "noneTitle": "Ohne Passwort",
+    "noneBody": "Ein normales ZIP. Jeder kann es ohne Schlüssel öffnen. Wählen Sie diese Option, wenn Sie einfach Dateien bündeln möchten — zum Beispiel, um ein paar Fotos per E-Mail zu verschicken oder einen Ordner zu teilen.",
+    "legacyTitle": "Klassisches Passwort",
+    "legacyBody": "Das alte ZipCrypto-Format. Öffnet sich auf jedem Computer, einschliesslich macOS Finder und Windows Explorer, ohne Installation. Aber kryptografisch schwach — ein entschlossener Angreifer kann das Passwort knacken.",
+    "legacyTag": "Nur beiläufige Privatsphäre.",
+    "modernTitle": "Modernes Passwort",
+    "modernBody": "AES-256-Verschlüsselung (WinZip AE-2-Standard). Wirklich sicher: Ein starkes Passwort ist in der Praxis nicht knackbar. Aktuelle macOS-Versionen öffnen es direkt im Finder; Empfänger unter Windows benötigen einen modernen Archivierer.",
+    "modernTag": "Echte Sicherheit.",
+    "guideTitle": "Welches soll ich wählen?",
+    "guideNone": "<strong>Nur Dateien teilen?</strong> Verwenden Sie <em>Ohne Passwort</em>. ZIPs sind hervorragend, um mehrere Dateien in eine zu bündeln — keine Verschlüsselung nötig, wenn Sie keine wollen.",
+    "guideLegacy": "<strong>Sie senden an jemanden ohne Technikkenntnisse und die Daten sind nicht sensibel?</strong> Verwenden Sie <em>Klassisches Passwort</em>. Die Person kann es auf jedem Computer mit dem Passwort öffnen, das Sie ihr geben. Reicht für Steuerunterlagen, persönliche Fotos, alltäglichen Papierkram.",
+    "guideModern": "<strong>Sie schützen etwas, das wirklich zählt?</strong> Verwenden Sie <em>Modernes Passwort</em>. Aktuelle macOS-Versionen öffnen AES-256-ZIPs direkt im Finder. Unter Windows benötigt der Empfänger <a class=\"info-link\" href=\"https://www.7-zip.org/\" target=\"_blank\" rel=\"noopener\">7-Zip</a> oder WinRAR. Unter Linux genügt jeder Standard-Archivierer. Auf älteren macOS-Versionen empfehlen Sie <a class=\"info-link\" href=\"https://www.keka.io/\" target=\"_blank\" rel=\"noopener\">Keka</a>.",
+    "passwordsTitle": "Ein Wort zu Passwörtern",
+    "passwordsPara1": "Senden Sie das Passwort über einen <em>anderen Kanal</em> als das ZIP selbst. Wenn Sie das ZIP per E-Mail versenden, geben Sie das Passwort per SMS, Signal oder persönlich weiter. Ein Passwort im selben Postfach wie die geschützte Datei schützt überhaupt nichts.",
+    "passwordsPara2": "Klicken Sie auf <strong>Generieren</strong>, um eine Passphrase aus 5 Wörtern zu erhalten — etwa <em>Brave-Tiger-Lemon-Sunset-Wheat</em>. Sie lässt sich viel leichter lesen und abtippen als zufällige Zeichen und ist trotzdem so stark, dass kein realistischer Angreifer sie erraten kann.",
+    "privacyTitle": "Datenschutz",
+    "privacyItem1": "Ihre Dateien verlassen Ihr Gerät nie.",
+    "privacyItem2": "Kompression und Verschlüsselung laufen vollständig in Ihrem Browser.",
+    "privacyItem3": "Keine Analytik, kein Tracking, kein Konto.",
+    "privacyItem4": "Funktioniert offline, sobald die Seite geladen ist."
+  },
+  "footer": {
+    "tagline": "Dateien verlassen Ihr Gerät nie"
+  }
+}
