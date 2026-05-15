@@ -1,0 +1,21 @@
+{
+  "name": "eazip.ch — Password-protected ZIPs",
+  "short_name": "eazip",
+  "description": "Create password-protected ZIP files right in your browser. Files never leave your device.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "lang": "en",
+  "categories": ["productivity", "utilities", "security"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
+}

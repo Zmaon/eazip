@@ -1,7 +1,5 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="public/eazip-logo-light.svg">
-    <source media="(prefers-color-scheme: light)" srcset="public/eazip-logo-dark.svg">
     <img alt="eazip" src="public/eazip-logo-dark.svg" width="240">
   </picture>
 </p>

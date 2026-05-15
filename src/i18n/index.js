@@ -16,6 +16,10 @@ const STORAGE_KEY = 'eazip-locale'
 function detectInitial() {
   if (typeof window === 'undefined') return 'en'
   try {
+    const param = new URL(window.location.href).searchParams.get('lang')
+    if (param && SUPPORTED_LOCALES.includes(param)) return param
+  } catch (_) {}
+  try {
     const saved = localStorage.getItem(STORAGE_KEY)
     if (saved && SUPPORTED_LOCALES.includes(saved)) return saved
   } catch (_) {}
@@ -42,5 +46,13 @@ export function setLocale(locale) {
   try { localStorage.setItem(STORAGE_KEY, locale) } catch (_) {}
   if (typeof document !== 'undefined') {
     document.documentElement.setAttribute('lang', locale)
+  }
+  if (typeof window !== 'undefined' && window.history?.replaceState) {
+    try {
+      const url = new URL(window.location.href)
+      if (locale === 'en') url.searchParams.delete('lang')
+      else url.searchParams.set('lang', locale)
+      window.history.replaceState(null, '', url.toString())
+    } catch (_) {}
   }
 }

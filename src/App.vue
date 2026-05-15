@@ -38,17 +38,30 @@ const browserSupported = computed(
   () => fsAccessSupported() || streamSaverSupported(),
 )
 
+function setMeta(selector, attr, value) {
+  let el = document.head.querySelector(selector)
+  if (!el) {
+    el = document.createElement('meta')
+    const [, name, key] = selector.match(/\[(name|property)="([^"]+)"\]/) || []
+    if (name && key) el.setAttribute(name, key)
+    document.head.appendChild(el)
+  }
+  el.setAttribute(attr, value)
+}
+
 watchEffect(() => {
   if (typeof document === 'undefined') return
-  document.title = t('meta.title')
+  const title = t('meta.title')
+  const desc = t('meta.description')
+  const ogLocale = t('meta.ogLocale')
+  document.title = title
   document.documentElement.setAttribute('lang', locale.value)
-  let metaDesc = document.querySelector('meta[name="description"]')
-  if (!metaDesc) {
-    metaDesc = document.createElement('meta')
-    metaDesc.setAttribute('name', 'description')
-    document.head.appendChild(metaDesc)
-  }
-  metaDesc.setAttribute('content', t('meta.description'))
+  setMeta('meta[name="description"]', 'content', desc)
+  setMeta('meta[property="og:title"]', 'content', title)
+  setMeta('meta[property="og:description"]', 'content', desc)
+  setMeta('meta[property="og:locale"]', 'content', ogLocale)
+  setMeta('meta[name="twitter:title"]', 'content', title)
+  setMeta('meta[name="twitter:description"]', 'content', desc)
 })
 
 function addFiles(list) {
@@ -143,7 +156,7 @@ async function onSubmit() {
         <LanguagePicker />
         <button
           type="button"
-          class="rounded-2xl border border-zinc-200 bg-white/80 p-2.5 text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/80 dark:text-zinc-300 dark:hover:bg-zinc-800"
+          class="cursor-pointer rounded-2xl border border-zinc-200 bg-white/80 p-2.5 text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/80 dark:text-zinc-300 dark:hover:bg-zinc-800"
           :aria-label="theme === 'dark' ? t('header.themeToLight') : t('header.themeToDark')"
           @click="toggleTheme"
         >

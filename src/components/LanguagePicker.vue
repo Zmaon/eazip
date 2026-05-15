@@ -37,7 +37,7 @@ onBeforeUnmount(() => {
   <div ref="root" class="relative">
     <button
       type="button"
-      class="flex items-center gap-1.5 rounded-2xl border border-zinc-200 bg-white/80 px-3 py-2.5 text-sm font-bold uppercase tracking-wider text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/80 dark:text-zinc-300 dark:hover:bg-zinc-800"
+      class="flex cursor-pointer items-center gap-1.5 rounded-2xl border border-zinc-200 bg-white/80 px-3 py-2.5 text-sm font-bold uppercase tracking-wider text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900/80 dark:text-zinc-300 dark:hover:bg-zinc-800"
       :aria-label="t('header.language')"
       :aria-expanded="open"
       aria-haspopup="listbox"
@@ -62,7 +62,7 @@ onBeforeUnmount(() => {
       <li v-for="code in SUPPORTED_LOCALES" :key="code">
         <button
           type="button"
-          class="flex w-full items-center justify-between px-4 py-2.5 text-left text-sm transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800"
+          class="flex w-full cursor-pointer items-center justify-between px-4 py-2.5 text-left text-sm transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800"
           :class="{ 'font-bold text-brand-600 dark:text-brand-300': locale === code }"
           role="option"
           :aria-selected="locale === code"

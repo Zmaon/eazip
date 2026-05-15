@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e0e12"/>
+      <stop offset="100%" stop-color="#1a0f24"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="85%" cy="15%" r="55%">
+      <stop offset="0%" stop-color="#9b3bff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#9b3bff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="10%" cy="100%" r="60%">
+      <stop offset="0%" stop-color="#ff6a3d" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ff6a3d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="zipgrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <g font-family="'Space Grotesk', 'Inter', system-ui, sans-serif" font-weight="700" letter-spacing="-8">
+    <text x="80" y="320" font-size="220" fill="#f2f1ed">ea</text>
+    <text x="358" y="320" font-size="220" fill="url(#zipgrad)">zip</text>
+  </g>
+
+  <text x="80" y="400" font-family="'Space Grotesk', 'Inter', system-ui, sans-serif" font-weight="700" font-size="48" fill="#f2f1ed" letter-spacing="-1">
+    Zip it. Lock it. Send it.
+  </text>
+  <text x="80" y="470" font-family="'Inter', system-ui, sans-serif" font-weight="500" font-size="32" fill="#a1a1aa">
+    Password-protected ZIPs, made in your browser.
+  </text>
+
+  <g transform="translate(80, 530)" font-family="'Inter', system-ui, sans-serif" font-weight="600" font-size="22" fill="#d4d4d8">
+    <text>AES-256  ·  No upload  ·  Free  ·  EN / FR / DE / IT</text>
+  </g>
+</svg>
