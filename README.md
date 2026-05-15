@@ -1,9 +1,17 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/eazip-logo-light.svg">
+    <source media="(prefers-color-scheme: light)" srcset="public/eazip-logo-dark.svg">
+    <img alt="eazip" src="public/eazip-logo-dark.svg" width="240">
+  </picture>
+</p>
+
 # eazip.ch
 
 > Zip it. Lock it. Send it.
 
 The easiest way to make a password-protected ZIP file. Drop files, pick a
-security level, download the archive. **Nothing is ever uploaded** — compression
+security level, download the archive. **Nothing is ever uploaded**: compression
 and encryption run entirely in your browser.
 
 Available in English, French, German and Italian.
@@ -13,7 +21,7 @@ Available in English, French, German and Italian.
 Creating a password-protected ZIP is needlessly hard for non-technical users:
 macOS Finder has no UI for it, Windows Explorer can do ZipCrypto but not AES,
 and every online "ZIP password" service silently uploads your files. eazip.ch
-fixes all three at once — it runs in the browser, the UI is one page with three
+fixes all three at once: it runs in the browser, the UI is one page with three
 clear choices, and files never leave the device.
 
 ## Encryption modes
@@ -25,14 +33,14 @@ clear choices, and files never leave the device.
 | **Modern password** | AES-256 (WinZip AE-2) | secure | recent macOS opens it natively; Windows recipients need 7-Zip / WinRAR; any modern Linux archiver works |
 
 The "modern" mode produces files with compression method 99 and the WinZip AES
-extra field (`0x9901`) with strength byte `0x03` — verified by unit tests, see
+extra field (`0x9901`) with strength byte `0x03`, verified by unit tests, see
 [`src/lib/zip.test.js`](src/lib/zip.test.js).
 
 ## Privacy
 
 - Files never leave the device. There is no backend.
 - Compression and encryption run in a Web Worker via [zip.js].
-- The output is streamed straight to disk — via the File System Access API on
+- The output is streamed straight to disk: via the File System Access API on
   Chromium browsers, or via a service worker that pipes bytes into a normal
   download on Firefox/Safari. Archives are not buffered in memory, so file size
   is limited by disk space, not RAM.
@@ -41,7 +49,7 @@ extra field (`0x9901`) with strength byte `0x03` — verified by unit tests, see
 ## Passphrase generator
 
 The "Generate" button produces a 5-word Diceware-style passphrase drawn from
-the EFF Long Wordlist (7776 words). Five words is roughly 64 bits of entropy —
+the EFF Long Wordlist (7776 words). Five words is roughly 64 bits of entropy:
 unbreakable in practice for AES-256 ZIPs and dramatically easier to read,
 retype and remember than a random character string. Indices are picked with
 `crypto.getRandomValues` and rejection sampling to avoid modulo bias.
@@ -66,7 +74,7 @@ silently buffering huge archives in memory.
 - [zip.js](https://gildas-lormeau.github.io/zip.js/) for compression and AES
 - [eff-diceware-passphrase](https://github.com/dignifiedquire/eff-diceware-passphrase) (wordlist only)
 - [Vitest](https://vitest.dev/) for the encryption tests
-- All assets (fonts, wordlist) are self-hosted — no CDN calls at runtime
+- All assets (fonts, wordlist) are self-hosted: no CDN calls at runtime
 
 ## Getting started
 
@@ -123,6 +131,6 @@ pnpm test
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).
 
 [zip.js]: https://gildas-lormeau.github.io/zip.js/

@@ -1,6 +1,6 @@
 import wordlist from 'eff-diceware-passphrase/wordlist.json'
 
-// EFF Long Wordlist — 7776 words, ~12.92 bits of entropy each.
+// EFF Long Wordlist: 7776 words, ~12.92 bits of entropy each.
 // 5 words ≈ 64 bits, which is unbreakable in practice for AES-256/PBKDF2 ZIPs.
 
 const WORD_COUNT = wordlist.length

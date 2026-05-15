@@ -83,7 +83,7 @@ async function buildAndInspect({ mode, password }) {
   return { header, aes: findAesExtra(extra), totalBytes: total }
 }
 
-describe('createZip — encryption mode wiring', () => {
+describe('createZip - encryption mode wiring', () => {
   it('mode "none" produces a plain deflated ZIP, no encryption', async () => {
     const { header, aes } = await buildAndInspect({ mode: MODES.NONE })
     expect(header.flags & 1).toBe(0)

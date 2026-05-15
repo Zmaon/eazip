@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "eazip.ch — Zip it. Lock it. Send it.",
-    "description": "Make a password-protected ZIP file right in your browser. Your files never leave your device."
+    "title": "eazip.ch - Password-protected ZIPs in your browser",
+    "description": "Create password-protected ZIP files right in your browser. AES-256 encryption, free, no upload, no account. Your files never leave your device.",
+    "ogLocale": "en_US"
   },
   "header": {
     "themeToLight": "Switch to light mode",
@@ -13,7 +14,7 @@
     "title1": "Zip it.",
     "title2": "Lock it.",
     "title3": "Send it.",
-    "subtitle": "The easiest way to make a password-protected ZIP file. Drop your files, pick a security level, and download the archive — without sending anything to anyone."
+    "subtitle": "The easiest way to make a password-protected ZIP file. Drop your files, pick a security level, and download the archive, without sending anything to anyone."
   },
   "form": {
     "unsupportedTitle": "Your browser is too old.",
@@ -26,7 +27,7 @@
     "statusAddFile": "Add at least one file to get started.",
     "statusPickPassword": "Pick a password to continue.",
     "statusReady": "Ready when you are.",
-    "statusProgress": "Compressing {entry} — {percent}% ({index}/{count})",
+    "statusProgress": "Compressing {entry} - {percent}% ({index}/{count})",
     "statusSavedFs": "Saved \"{filename}\" to the location you chose.",
     "statusDownloading": "\"{filename}\" is downloading.",
     "errorOpen": "Could not open destination.",
@@ -52,7 +53,7 @@
     },
     "legacy": {
       "title": "Legacy password",
-      "blurb": "Opens everywhere (macOS, Windows). Weak — fine for casual privacy, not secrets.",
+      "blurb": "Opens everywhere (macOS, Windows). Weak: fine for casual privacy, not secrets.",
       "tag": "Most compatible"
     },
     "modern": {
@@ -66,7 +67,7 @@
     "placeholder": "Pick something strong",
     "generate": "Generate",
     "generateTitle": "Generate a memorable passphrase",
-    "generateHint": "Generate creates a 5-word passphrase — easier to remember than random characters and still extremely strong.",
+    "generateHint": "Generate creates a 5-word passphrase: easier to remember than random characters and still extremely strong.",
     "copy": "Copy",
     "copied": "Copied!",
     "show": "Show password",
@@ -78,23 +79,23 @@
     "strength4": "Strong",
     "strength5": "Very strong",
     "strengthEmpty": "Empty",
-    "warnLegacy": "Legacy ZipCrypto is weak. Use this only for casual privacy — not for sensitive data.",
-    "warnModern": "AES-256. Recent macOS handles this natively in Finder. On Windows, the recipient will need 7-Zip, WinRAR or another modern archiver — the built-in unzipper can't open it."
+    "warnLegacy": "Legacy ZipCrypto is weak. Use this only for casual privacy, not for sensitive data.",
+    "warnModern": "AES-256. Recent macOS handles this natively in Finder. On Windows, the recipient will need 7-Zip, WinRAR or another modern archiver; the built-in unzipper can't open it."
   },
   "info": {
     "kicker": "How it works",
     "title": "Everything happens in your browser.",
-    "intro": "eazip.ch never uploads your files to a server. Your computer compresses and encrypts them locally, and the only thing that leaves the page is the finished ZIP — directly into your Downloads folder.",
+    "intro": "eazip.ch never uploads your files to a server. Your computer compresses and encrypts them locally, and the only thing that leaves the page is the finished ZIP, going directly into your Downloads folder.",
     "noneTitle": "No password",
-    "noneBody": "A regular ZIP. Anyone can open it without a key. Pick this when you just want to bundle files together — for example to email a few photos or share a folder.",
+    "noneBody": "A regular ZIP. Anyone can open it without a key. Pick this when you just want to bundle files together, for example to email a few photos or share a folder.",
     "legacyTitle": "Legacy password",
-    "legacyBody": "The old ZipCrypto format. Opens on every computer, including macOS Finder and Windows Explorer, without installing anything. But it's cryptographically weak — a determined attacker can crack the password.",
+    "legacyBody": "The old ZipCrypto format. Opens on every computer, including macOS Finder and Windows Explorer, without installing anything. But it's cryptographically weak: a determined attacker can crack the password.",
     "legacyTag": "Casual privacy only.",
     "modernTitle": "Modern password",
     "modernBody": "AES-256 encryption (the WinZip AE-2 standard). Genuinely secure: a strong password is unbreakable in practice. Recent macOS opens it natively in Finder; Windows recipients will need a modern archiver.",
     "modernTag": "Real security.",
     "guideTitle": "Which one should I pick?",
-    "guideNone": "<strong>Just sharing files?</strong> Use <em>No password</em>. ZIPs shine at bundling multiple files into one — no need for encryption you don't want.",
+    "guideNone": "<strong>Just sharing files?</strong> Use <em>No password</em>. ZIPs shine at bundling multiple files into one; no need for encryption you don't want.",
     "guideLegacy": "<strong>Sending to a non-technical person and the data isn't sensitive?</strong> Use <em>Legacy password</em>. They'll be able to open it on any computer with the password you give them. Good enough for tax documents, personal photos, casual paperwork.",
     "guideModern": "<strong>Protecting something that actually matters?</strong> Use <em>Modern password</em>. Recent macOS opens AES-256 ZIPs natively in Finder. On Windows, your recipient will need <a class=\"info-link\" href=\"https://www.7-zip.org/\" target=\"_blank\" rel=\"noopener\">7-Zip</a> or WinRAR. On Linux, any standard archiver works. On older macOS, point them at <a class=\"info-link\" href=\"https://www.keka.io/\" target=\"_blank\" rel=\"noopener\">Keka</a>.",
     "passwordsTitle": "A note on passwords",

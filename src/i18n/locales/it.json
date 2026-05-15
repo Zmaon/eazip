@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "eazip.ch — Comprimi. Proteggi. Invia.",
-    "description": "Crea un file ZIP protetto da password direttamente nel browser. I tuoi file non lasciano mai il tuo dispositivo."
+    "title": "eazip.ch - ZIP protetti da password, nel browser",
+    "description": "Crea file ZIP protetti da password direttamente nel browser. Crittografia AES-256, gratis, senza upload, senza account. I tuoi file non lasciano mai il tuo dispositivo.",
+    "ogLocale": "it_CH"
   },
   "header": {
     "themeToLight": "Passa alla modalità chiara",
@@ -13,7 +14,7 @@
     "title1": "Comprimi.",
     "title2": "Proteggi.",
     "title3": "Invia.",
-    "subtitle": "Il modo più semplice per creare un file ZIP protetto da password. Trascina i tuoi file, scegli un livello di sicurezza e scarica l'archivio — senza inviare nulla a nessuno."
+    "subtitle": "Il modo più semplice per creare un file ZIP protetto da password. Trascina i tuoi file, scegli un livello di sicurezza e scarica l'archivio, senza inviare nulla a nessuno."
   },
   "form": {
     "unsupportedTitle": "Il tuo browser è troppo vecchio.",
@@ -26,7 +27,7 @@
     "statusAddFile": "Aggiungi almeno un file per iniziare.",
     "statusPickPassword": "Scegli una password per continuare.",
     "statusReady": "Pronto quando vuoi.",
-    "statusProgress": "Compressione di {entry} — {percent}% ({index}/{count})",
+    "statusProgress": "Compressione di {entry} - {percent}% ({index}/{count})",
     "statusSavedFs": "«{filename}» salvato nella posizione scelta.",
     "statusDownloading": "«{filename}» è in download.",
     "errorOpen": "Impossibile aprire la destinazione.",
@@ -52,7 +53,7 @@
     },
     "legacy": {
       "title": "Password classica",
-      "blurb": "Si apre ovunque (macOS, Windows). Debole — adatta a un uso personale, non a dati sensibili.",
+      "blurb": "Si apre ovunque (macOS, Windows). Debole: adatta a un uso personale, non a dati sensibili.",
       "tag": "Massima compatibilità"
     },
     "modern": {
@@ -66,7 +67,7 @@
     "placeholder": "Scegli qualcosa di robusto",
     "generate": "Genera",
     "generateTitle": "Genera una passphrase facile da ricordare",
-    "generateHint": "Il pulsante Genera crea una passphrase di 5 parole — più facile da ricordare di una sequenza casuale e altrettanto solida.",
+    "generateHint": "Il pulsante Genera crea una passphrase di 5 parole: più facile da ricordare di una sequenza casuale e altrettanto solida.",
     "copy": "Copia",
     "copied": "Copiato!",
     "show": "Mostra password",
@@ -78,23 +79,23 @@
     "strength4": "Forte",
     "strength5": "Molto forte",
     "strengthEmpty": "Vuota",
-    "warnLegacy": "Il ZipCrypto classico è debole. Usalo solo per uso personale — mai per dati sensibili.",
-    "warnModern": "AES-256. Le versioni recenti di macOS lo aprono direttamente dal Finder. Su Windows, il destinatario avrà bisogno di 7-Zip, WinRAR o un altro archiviatore moderno — lo strumento integrato non basta."
+    "warnLegacy": "Il ZipCrypto classico è debole. Usalo solo per uso personale, mai per dati sensibili.",
+    "warnModern": "AES-256. Le versioni recenti di macOS lo aprono direttamente dal Finder. Su Windows, il destinatario avrà bisogno di 7-Zip, WinRAR o un altro archiviatore moderno; lo strumento integrato non basta."
   },
   "info": {
     "kicker": "Come funziona",
     "title": "Tutto avviene nel tuo browser.",
-    "intro": "eazip.ch non carica mai i tuoi file su un server. Il tuo computer li comprime e li cifra in locale, e l'unica cosa che lascia la pagina è lo ZIP finito — direttamente nella tua cartella Download.",
+    "intro": "eazip.ch non carica mai i tuoi file su un server. Il tuo computer li comprime e li cifra in locale, e l'unica cosa che lascia la pagina è lo ZIP finito, direttamente nella tua cartella Download.",
     "noneTitle": "Senza password",
-    "noneBody": "Uno ZIP normale. Chiunque può aprirlo senza chiave. Scegli questa opzione quando vuoi semplicemente raggruppare dei file — ad esempio per inviare alcune foto via e-mail o condividere una cartella.",
+    "noneBody": "Uno ZIP normale. Chiunque può aprirlo senza chiave. Scegli questa opzione quando vuoi semplicemente raggruppare dei file, ad esempio per inviare alcune foto via e-mail o condividere una cartella.",
     "legacyTitle": "Password classica",
-    "legacyBody": "Il vecchio formato ZipCrypto. Si apre su ogni computer, incluso il Finder di macOS e l'Esplora risorse di Windows, senza installare nulla. Ma è crittograficamente debole — un attaccante determinato può violare la password.",
+    "legacyBody": "Il vecchio formato ZipCrypto. Si apre su ogni computer, incluso il Finder di macOS e l'Esplora risorse di Windows, senza installare nulla. Ma è crittograficamente debole: un attaccante determinato può violare la password.",
     "legacyTag": "Solo uso personale.",
     "modernTitle": "Password moderna",
     "modernBody": "Crittografia AES-256 (standard WinZip AE-2). Davvero sicura: una password robusta è in pratica inattaccabile. Le versioni recenti di macOS lo aprono nativamente dal Finder; i destinatari su Windows avranno bisogno di un archiviatore moderno.",
     "modernTag": "Sicurezza reale.",
     "guideTitle": "Quale scegliere?",
-    "guideNone": "<strong>Stai solo condividendo dei file?</strong> Usa <em>Senza password</em>. Gli ZIP sono ottimi per raggruppare più file in uno — nessun bisogno di una crittografia che non ti serve.",
+    "guideNone": "<strong>Stai solo condividendo dei file?</strong> Usa <em>Senza password</em>. Gli ZIP sono ottimi per raggruppare più file in uno; nessun bisogno di una crittografia che non ti serve.",
     "guideLegacy": "<strong>Stai inviando a una persona non tecnica e i dati non sono sensibili?</strong> Usa <em>Password classica</em>. Potrà aprirlo su qualsiasi computer con la password che le fornisci. Sufficiente per documenti fiscali, foto personali, scartoffie ordinarie.",
     "guideModern": "<strong>Devi proteggere qualcosa che conta davvero?</strong> Usa <em>Password moderna</em>. Le versioni recenti di macOS aprono gli ZIP AES-256 nativamente dal Finder. Su Windows il destinatario avrà bisogno di <a class=\"info-link\" href=\"https://www.7-zip.org/\" target=\"_blank\" rel=\"noopener\">7-Zip</a> o WinRAR. Su Linux qualsiasi archiviatore standard funziona. Su macOS più vecchi, consiglia <a class=\"info-link\" href=\"https://www.keka.io/\" target=\"_blank\" rel=\"noopener\">Keka</a>.",
     "passwordsTitle": "Una nota sulle password",

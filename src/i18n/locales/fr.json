@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "eazip.ch — Compressez. Protégez. Envoyez.",
-    "description": "Créez un fichier ZIP protégé par mot de passe directement dans votre navigateur. Vos fichiers ne quittent jamais votre appareil."
+    "title": "eazip.ch - ZIP protégés par mot de passe, dans votre navigateur",
+    "description": "Créez des fichiers ZIP protégés par mot de passe directement dans votre navigateur. Chiffrement AES-256, gratuit, sans envoi, sans compte. Vos fichiers ne quittent jamais votre appareil.",
+    "ogLocale": "fr_CH"
   },
   "header": {
     "themeToLight": "Passer en mode clair",
@@ -13,7 +14,7 @@
     "title1": "Compressez.",
     "title2": "Protégez.",
     "title3": "Envoyez.",
-    "subtitle": "La façon la plus simple de créer un fichier ZIP protégé par mot de passe. Déposez vos fichiers, choisissez un niveau de sécurité, puis téléchargez l'archive — sans rien envoyer à personne."
+    "subtitle": "La façon la plus simple de créer un fichier ZIP protégé par mot de passe. Déposez vos fichiers, choisissez un niveau de sécurité, puis téléchargez l'archive, sans rien envoyer à personne."
   },
   "form": {
     "unsupportedTitle": "Votre navigateur est trop ancien.",
@@ -26,7 +27,7 @@
     "statusAddFile": "Ajoutez au moins un fichier pour commencer.",
     "statusPickPassword": "Choisissez un mot de passe pour continuer.",
     "statusReady": "Prêt quand vous l'êtes.",
-    "statusProgress": "Compression de {entry} — {percent}% ({index}/{count})",
+    "statusProgress": "Compression de {entry} - {percent}% ({index}/{count})",
     "statusSavedFs": "« {filename} » a été enregistré à l'emplacement choisi.",
     "statusDownloading": "Téléchargement de « {filename} » en cours.",
     "errorOpen": "Impossible d'ouvrir la destination.",
@@ -52,7 +53,7 @@
     },
     "legacy": {
       "title": "Mot de passe classique",
-      "blurb": "S'ouvre partout (macOS, Windows). Faible — convient à un usage privé, pas aux secrets.",
+      "blurb": "S'ouvre partout (macOS, Windows). Faible : convient à un usage privé, pas aux secrets.",
       "tag": "Compatibilité maximale"
     },
     "modern": {
@@ -66,7 +67,7 @@
     "placeholder": "Choisissez quelque chose de solide",
     "generate": "Générer",
     "generateTitle": "Générer une phrase de passe mémorisable",
-    "generateHint": "Le bouton Générer crée une phrase de 5 mots — plus facile à retenir qu'une suite de caractères, et tout aussi solide.",
+    "generateHint": "Le bouton Générer crée une phrase de 5 mots : plus facile à retenir qu'une suite de caractères, et tout aussi solide.",
     "copy": "Copier",
     "copied": "Copié !",
     "show": "Afficher le mot de passe",
@@ -78,23 +79,23 @@
     "strength4": "Solide",
     "strength5": "Très solide",
     "strengthEmpty": "Vide",
-    "warnLegacy": "Le chiffrement ZipCrypto classique est faible. À utiliser uniquement pour un usage privé — pas pour des données sensibles.",
-    "warnModern": "AES-256. Les versions récentes de macOS l'ouvrent nativement depuis le Finder. Sous Windows, le destinataire devra utiliser 7-Zip, WinRAR ou un autre archiveur moderne — l'outil intégré ne suffit pas."
+    "warnLegacy": "Le chiffrement ZipCrypto classique est faible. À utiliser uniquement pour un usage privé, pas pour des données sensibles.",
+    "warnModern": "AES-256. Les versions récentes de macOS l'ouvrent nativement depuis le Finder. Sous Windows, le destinataire devra utiliser 7-Zip, WinRAR ou un autre archiveur moderne ; l'outil intégré ne suffit pas."
   },
   "info": {
     "kicker": "Comment ça marche",
     "title": "Tout se passe dans votre navigateur.",
-    "intro": "eazip.ch n'envoie jamais vos fichiers sur un serveur. Votre ordinateur les compresse et les chiffre localement, et la seule chose qui quitte la page, c'est le ZIP terminé — directement vers votre dossier Téléchargements.",
+    "intro": "eazip.ch n'envoie jamais vos fichiers sur un serveur. Votre ordinateur les compresse et les chiffre localement, et la seule chose qui quitte la page, c'est le ZIP terminé, qui part directement vers votre dossier Téléchargements.",
     "noneTitle": "Sans mot de passe",
-    "noneBody": "Un ZIP classique. Tout le monde peut l'ouvrir sans clé. Choisissez-le simplement pour regrouper plusieurs fichiers en un seul — par exemple pour envoyer quelques photos par e-mail.",
+    "noneBody": "Un ZIP classique. Tout le monde peut l'ouvrir sans clé. Choisissez-le simplement pour regrouper plusieurs fichiers en un seul, par exemple pour envoyer quelques photos par e-mail.",
     "legacyTitle": "Mot de passe classique",
-    "legacyBody": "L'ancien format ZipCrypto. S'ouvre sur tous les ordinateurs, y compris le Finder de macOS et l'Explorateur Windows, sans rien installer. Mais cryptographiquement faible — un attaquant déterminé peut casser le mot de passe.",
+    "legacyBody": "L'ancien format ZipCrypto. S'ouvre sur tous les ordinateurs, y compris le Finder de macOS et l'Explorateur Windows, sans rien installer. Mais cryptographiquement faible : un attaquant déterminé peut casser le mot de passe.",
     "legacyTag": "Usage privé seulement.",
     "modernTitle": "Mot de passe moderne",
     "modernBody": "Chiffrement AES-256 (norme WinZip AE-2). Vraiment sécurisé : un mot de passe solide est incassable en pratique. Les versions récentes de macOS l'ouvrent nativement depuis le Finder ; les destinataires sous Windows auront besoin d'un archiveur moderne.",
     "modernTag": "Sécurité réelle.",
     "guideTitle": "Lequel choisir ?",
-    "guideNone": "<strong>Juste partager des fichiers ?</strong> Utilisez <em>Sans mot de passe</em>. Les ZIP excellent pour regrouper plusieurs fichiers — pas besoin d'un chiffrement dont vous n'avez pas l'utilité.",
+    "guideNone": "<strong>Juste partager des fichiers ?</strong> Utilisez <em>Sans mot de passe</em>. Les ZIP excellent pour regrouper plusieurs fichiers ; pas besoin d'un chiffrement dont vous n'avez pas l'utilité.",
     "guideLegacy": "<strong>Envoyer à une personne non technique sans données sensibles ?</strong> Utilisez <em>Mot de passe classique</em>. Elle pourra l'ouvrir sur n'importe quel ordinateur avec le mot de passe que vous lui transmettez. Suffisant pour des documents fiscaux, des photos personnelles, des papiers courants.",
     "guideModern": "<strong>Protéger quelque chose qui compte vraiment ?</strong> Utilisez <em>Mot de passe moderne</em>. Les versions récentes de macOS ouvrent les ZIP AES-256 nativement depuis le Finder. Sous Windows, votre destinataire aura besoin de <a class=\"info-link\" href=\"https://www.7-zip.org/\" target=\"_blank\" rel=\"noopener\">7-Zip</a> ou de WinRAR. Sous Linux, n'importe quel archiveur standard fait l'affaire. Sur un macOS plus ancien, recommandez <a class=\"info-link\" href=\"https://www.keka.io/\" target=\"_blank\" rel=\"noopener\">Keka</a>.",
     "passwordsTitle": "À propos des mots de passe",
