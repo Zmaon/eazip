@@ -19,7 +19,7 @@ const { theme, toggle: toggleTheme } = useTheme()
 const { t, locale } = useI18n()
 
 const files = ref([])
-const mode = ref(MODES.NONE)
+const mode = ref(MODES.MODERN)
 const password = ref('')
 const archiveName = ref('eazip')
 const progress = ref(null)
@@ -72,6 +72,7 @@ function removeFile(idx) {
 }
 function clearFiles() {
   files.value = []
+  password.value = ''
 }
 
 const progressText = computed(() => {

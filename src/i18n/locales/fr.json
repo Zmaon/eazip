@@ -37,10 +37,10 @@
     "submitBusy": "En cours…"
   },
   "dropzone": {
-    "drop": "Déposez vos fichiers ici",
+    "drop": "Déposez des fichiers ou des dossiers ici",
     "browsePrefix": "ou",
-    "browseLink": "cliquez pour parcourir",
-    "subnote": "Plusieurs fichiers acceptés. Rien ne quitte votre appareil.",
+    "browseLink": "cliquez pour parcourir des fichiers",
+    "subnote": "Rien ne quitte votre appareil.",
     "summary": "{count} fichier · {size} au total | {count} fichiers · {size} au total",
     "clear": "Tout effacer",
     "removeLabel": "Supprimer le fichier"
@@ -54,7 +54,7 @@
     "legacy": {
       "title": "Mot de passe classique",
       "blurb": "S'ouvre partout (macOS, Windows). Faible : convient à un usage privé, pas aux secrets.",
-      "tag": "Compatibilité maximale"
+      "tag": "Très compatible"
     },
     "modern": {
       "title": "Mot de passe moderne",

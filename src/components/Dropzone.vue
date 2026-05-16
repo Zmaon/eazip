@@ -32,9 +32,56 @@ function onFiles(e) {
   if (list.length) emit('add', list)
   e.target.value = ''
 }
-function onDrop(e) {
+
+async function readAllEntries(reader) {
+  const all = []
+  while (true) {
+    const batch = await new Promise((resolve, reject) =>
+      reader.readEntries(resolve, reject),
+    )
+    if (!batch.length) break
+    all.push(...batch)
+  }
+  return all
+}
+
+async function walkEntry(entry, parentPath, out) {
+  if (entry.isFile) {
+    const file = await new Promise((resolve, reject) => entry.file(resolve, reject))
+    file._relPath = parentPath ? `${parentPath}/${file.name}` : file.name
+    out.push(file)
+    return
+  }
+  if (entry.isDirectory) {
+    const dirPath = parentPath ? `${parentPath}/${entry.name}` : entry.name
+    const reader = entry.createReader()
+    const children = await readAllEntries(reader)
+    for (const child of children) {
+      await walkEntry(child, dirPath, out)
+    }
+  }
+}
+
+async function onDrop(e) {
   e.preventDefault()
   isDragging.value = false
+  const items = e.dataTransfer?.items
+  const entries = []
+  if (items && items.length) {
+    for (const item of items) {
+      if (item.kind !== 'file') continue
+      const entry = item.webkitGetAsEntry?.()
+      if (entry) entries.push(entry)
+    }
+  }
+  if (entries.length) {
+    const collected = []
+    for (const entry of entries) {
+      await walkEntry(entry, '', collected)
+    }
+    if (collected.length) emit('add', collected)
+    return
+  }
   const list = Array.from(e.dataTransfer?.files ?? [])
   if (list.length) emit('add', list)
 }
@@ -100,7 +147,7 @@ function onDragLeave() {
           </svg>
         </div>
         <div class="min-w-0 flex-1">
-          <p class="truncate text-sm font-medium">{{ f.name }}</p>
+          <p class="truncate text-sm font-medium">{{ f._relPath || f.webkitRelativePath || f.name }}</p>
           <p class="text-xs text-zinc-500 dark:text-zinc-400">{{ formatBytes(f.size) }}</p>
         </div>
         <button

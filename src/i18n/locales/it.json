@@ -37,10 +37,10 @@
     "submitBusy": "Attendere…"
   },
   "dropzone": {
-    "drop": "Trascina qui i tuoi file",
+    "drop": "Trascina qui file o cartelle",
     "browsePrefix": "oppure",
-    "browseLink": "clicca per sfogliare",
-    "subnote": "Più file sono benvenuti. Nulla lascia il tuo dispositivo.",
+    "browseLink": "clicca per sfogliare i file",
+    "subnote": "Nulla lascia il tuo dispositivo.",
     "summary": "{count} file · {size} in totale | {count} file · {size} in totale",
     "clear": "Rimuovi tutto",
     "removeLabel": "Rimuovi file"
@@ -54,7 +54,7 @@
     "legacy": {
       "title": "Password classica",
       "blurb": "Si apre ovunque (macOS, Windows). Debole: adatta a un uso personale, non a dati sensibili.",
-      "tag": "Massima compatibilità"
+      "tag": "Molto compatibile"
     },
     "modern": {
       "title": "Password moderna",

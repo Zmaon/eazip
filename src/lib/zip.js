@@ -93,9 +93,11 @@ export async function createZip({ files, writable, mode, password, onProgress })
   try {
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
-      const relPath = file.webkitRelativePath && file.webkitRelativePath.length > 0
-        ? file.webkitRelativePath
-        : file.name;
+      const relPath = (file._relPath && file._relPath.length > 0)
+        ? file._relPath
+        : (file.webkitRelativePath && file.webkitRelativePath.length > 0
+          ? file.webkitRelativePath
+          : file.name);
       await zipWriter.add(relPath, new BlobReader(file), {
         onprogress: (loaded, total) => {
           onProgress?.({

@@ -37,10 +37,10 @@
     "submitBusy": "Working…"
   },
   "dropzone": {
-    "drop": "Drop your files here",
+    "drop": "Drop files or folders here",
     "browsePrefix": "or",
-    "browseLink": "click to browse",
-    "subnote": "Multiple files welcome. Nothing leaves your device.",
+    "browseLink": "click to browse files",
+    "subnote": "Nothing leaves your device.",
     "summary": "{count} file · {size} total | {count} files · {size} total",
     "clear": "Clear all",
     "removeLabel": "Remove file"

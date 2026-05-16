@@ -37,10 +37,10 @@
     "submitBusy": "Bitte warten…"
   },
   "dropzone": {
-    "drop": "Dateien hier ablegen",
+    "drop": "Dateien oder Ordner hier ablegen",
     "browsePrefix": "oder",
-    "browseLink": "zum Durchsuchen klicken",
-    "subnote": "Mehrere Dateien sind willkommen. Nichts verlässt Ihr Gerät.",
+    "browseLink": "klicken, um Dateien auszuwählen",
+    "subnote": "Nichts verlässt Ihr Gerät.",
     "summary": "{count} Datei · insgesamt {size} | {count} Dateien · insgesamt {size}",
     "clear": "Alle entfernen",
     "removeLabel": "Datei entfernen"
@@ -54,7 +54,7 @@
     "legacy": {
       "title": "Klassisches Passwort",
       "blurb": "Öffnet überall (macOS, Windows). Schwach: geeignet für beiläufige Privatsphäre, nicht für Geheimnisse.",
-      "tag": "Maximal kompatibel"
+      "tag": "Sehr kompatibel"
     },
     "modern": {
       "title": "Modernes Passwort",

@@ -12,13 +12,13 @@ const { t } = useI18n()
 
 const options = computed(() => [
   {
-    value: MODES.NONE,
-    title: t('modes.none.title'),
-    blurb: t('modes.none.blurb'),
-    tag: t('modes.none.tag'),
-    tagClass: 'bg-zinc-200 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300',
-    gradient: 'from-zinc-400 to-zinc-600',
-    icon: 'unlock',
+    value: MODES.MODERN,
+    title: t('modes.modern.title'),
+    blurb: t('modes.modern.blurb'),
+    tag: t('modes.modern.tag'),
+    tagClass: 'bg-brand-500/15 text-brand-600 dark:text-brand-300',
+    gradient: 'from-brand-500 to-brand-700',
+    icon: 'shield',
   },
   {
     value: MODES.LEGACY,
@@ -30,13 +30,13 @@ const options = computed(() => [
     icon: 'lock',
   },
   {
-    value: MODES.MODERN,
-    title: t('modes.modern.title'),
-    blurb: t('modes.modern.blurb'),
-    tag: t('modes.modern.tag'),
-    tagClass: 'bg-brand-500/15 text-brand-600 dark:text-brand-300',
-    gradient: 'from-brand-500 to-brand-700',
-    icon: 'shield',
+    value: MODES.NONE,
+    title: t('modes.none.title'),
+    blurb: t('modes.none.blurb'),
+    tag: t('modes.none.tag'),
+    tagClass: 'bg-zinc-200 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300',
+    gradient: 'from-zinc-400 to-zinc-600',
+    icon: 'unlock',
   },
 ])
 
@@ -65,9 +65,9 @@ function pick(value) {
         :checked="modelValue === opt.value"
         @change="pick(opt.value)"
       />
-      <div class="flex items-start justify-between">
+      <div class="flex items-start justify-between gap-2 pr-8">
         <div
-          class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br text-white shadow-md"
+          class="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-linear-to-br text-white shadow-md"
           :class="opt.gradient"
         >
           <svg v-if="opt.icon === 'unlock'" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -89,15 +89,15 @@ function pick(value) {
         <p class="font-display text-lg font-bold tracking-tight">{{ opt.title }}</p>
         <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{{ opt.blurb }}</p>
       </div>
-      <div
+      <span
         v-if="modelValue === opt.value"
-        class="absolute right-4 top-4 hidden h-6 w-6 items-center justify-center rounded-full bg-brand-500 text-white sm:flex"
+        class="absolute right-4 top-4 flex h-6 w-6 items-center justify-center rounded-full bg-brand-500 text-white shadow-md"
         aria-hidden="true"
       >
         <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
           <path d="M5 12l5 5 9-11" />
         </svg>
-      </div>
+      </span>
     </label>
   </div>
 </template>
