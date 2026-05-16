@@ -24,6 +24,20 @@ function formatBytes(bytes) {
   return `${n.toFixed(n >= 10 ? 0 : 1)} ${units[i]}`
 }
 
+function pathOf(f) {
+  return f._relPath || f.webkitRelativePath || f.name
+}
+function folderOf(f) {
+  const p = pathOf(f)
+  const i = p.indexOf('/')
+  return i >= 0 ? p.slice(0, i) : ''
+}
+function tailOf(f) {
+  const p = pathOf(f)
+  const i = p.indexOf('/')
+  return i >= 0 ? p.slice(i + 1) : p
+}
+
 function onPick() {
   input.value?.click()
 }
@@ -141,13 +155,22 @@ function onDragLeave() {
         class="flex items-center gap-3 rounded-2xl border border-zinc-200 bg-white/70 px-4 py-3 dark:border-zinc-800 dark:bg-zinc-900/60"
       >
         <div class="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-brand-500/10 text-brand-600 dark:bg-brand-500/20 dark:text-brand-300">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg v-if="folderOf(f)" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" />
+          </svg>
+          <svg v-else class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
             <path d="M14 2v6h6" />
           </svg>
         </div>
         <div class="min-w-0 flex-1">
-          <p class="truncate text-sm font-medium">{{ f._relPath || f.webkitRelativePath || f.name }}</p>
+          <div class="flex items-center gap-1.5 text-sm font-medium">
+            <span
+              v-if="folderOf(f)"
+              class="flex-none rounded-md bg-brand-500/15 px-1.5 py-0.5 text-xs font-semibold text-brand-700 dark:bg-brand-500/20 dark:text-brand-200"
+            >{{ folderOf(f) }}</span>
+            <span class="truncate">{{ tailOf(f) }}</span>
+          </div>
           <p class="text-xs text-zinc-500 dark:text-zinc-400">{{ formatBytes(f.size) }}</p>
         </div>
         <button

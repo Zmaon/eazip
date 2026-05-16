@@ -15,12 +15,8 @@ function pickIndex() {
   }
 }
 
-function capitalize(word) {
-  return word.charAt(0).toUpperCase() + word.slice(1)
-}
-
 export function generatePassphrase(count = 5, separator = '-') {
   const words = new Array(count)
-  for (let i = 0; i < count; i++) words[i] = capitalize(wordlist[pickIndex()])
+  for (let i = 0; i < count; i++) words[i] = wordlist[pickIndex()]
   return words.join(separator)
 }

@@ -1,7 +1,14 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { zxcvbn, zxcvbnOptions } from '@zxcvbn-ts/core'
+import * as zxcvbnCommon from '@zxcvbn-ts/language-common'
 import { generatePassphrase } from '../lib/passphrase.js'
+
+zxcvbnOptions.setOptions({
+  dictionary: zxcvbnCommon.dictionary,
+  graphs: zxcvbnCommon.adjacencyGraphs,
+})
 
 const props = defineProps({
   modelValue: { type: String, required: true },
@@ -17,13 +24,8 @@ let copyTimer = null
 const strength = computed(() => {
   const pwd = props.modelValue
   if (!pwd) return { score: 0, label: t('password.strengthEmpty'), color: 'bg-zinc-300 dark:bg-zinc-700' }
-  let score = 0
-  if (pwd.length >= 8) score++
-  if (pwd.length >= 14) score++
-  if (/[A-Z]/.test(pwd) && /[a-z]/.test(pwd)) score++
-  if (/\d/.test(pwd)) score++
-  if (/[^A-Za-z0-9]/.test(pwd)) score++
-  if (pwd.length >= 20) score = Math.max(score, 4)
+  const result = zxcvbn(pwd)
+  const score = result.score === 4 && result.guessesLog10 >= 13 ? 5 : result.score
   const palette = [
     'bg-rose-500',
     'bg-rose-400',
@@ -32,11 +34,10 @@ const strength = computed(() => {
     'bg-emerald-500',
     'bg-emerald-500',
   ]
-  const clamped = Math.min(score, palette.length - 1)
   return {
     score,
-    label: t(`password.strength${clamped}`),
-    color: palette[clamped],
+    label: t(`password.strength${score}`),
+    color: palette[score],
   }
 })
 
