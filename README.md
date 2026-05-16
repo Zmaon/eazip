@@ -1,6 +1,7 @@
 <p align="center">
   <picture>
-    <img alt="eazip" src="public/eazip-logo-dark.svg" width="240">
+    <source media="(prefers-color-scheme: dark)" srcset="public/eazip-ch-logo-dark.svg">
+    <img alt="eazip.ch" src="public/eazip-ch-logo-light.svg" width="280">
   </picture>
 </p>
 
